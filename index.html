@@ -18,12 +18,32 @@
             text-align: center;
             color: blue;
             font-family: papyrus;
+            font-size: larger;
         }
 
         h1 {
             text-align: center;
             font-family: papyrus;
             color: blue;
+        }
+
+        #words{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            gap: 10px;
+            font-family: papyrus;
+            font-size: larger;
+            color:red;
+
+        }
+
+        .wordsBorder{
+            border: solid black;
+            border-radius: 45%;
+            width: 85px;
+            text-align: center;
+            background-color: black;
         }
     </style>
 </head>
@@ -53,16 +73,18 @@ Løs oppgaven ved å dele opp koden i MVC -->
     <p>______</p>!
 </div>
 
-<div>katt</div>
-<div>gang</div>
-<div>male</div>
-<div>kode</div>
-<div>motivasjon</div>
-<div>mat</div>
-<div>teamet</div>
-<div>mamma</div>
-<div>bra</div>
-<div>gunstig</div>
+<div id="words">
+    <div class="wordsBorder">katt</div>
+    <div class="wordsBorder">gang</div>
+    <div class="wordsBorder">male</div>
+    <div class="wordsBorder">kode</div><br>
+    <div class="wordsBorder">motivasjon</div>
+    <div class="wordsBorder">mat</div>
+    <div class="wordsBorder">teamet</div>
+    <div class="wordsBorder">mamma</div><br>
+    <div class="wordsBorder">bra</div>
+    <div class="wordsBorder">gunstig</div>
+</div>
 
 <script>
     //modell
