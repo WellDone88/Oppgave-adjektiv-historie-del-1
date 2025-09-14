@@ -44,6 +44,7 @@
             width: 85px;
             text-align: center;
             background-color: black;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -59,37 +60,44 @@ Løs oppgaven ved å dele opp koden i MVC -->
 <h1>En adjektivhistorie!</h1>
 
 <div id="adjektivHistorie">
-    <p>Det var en gang en</p>
-    <p>______</p>
-    <p>som likte å </p>
-    <p>______</p>.
+    <p>Det var en gang en </p>
+    <p id="word1">______</p>
+    <p> som likte å </p>
+    <p id="word2">______</p>.
     <p>En dag så satt</p>
-    <p>______</p>,
+    <p id="word3">______</p>,
     <p>og hadde ikke mer</p>
-    <p>______</p>.
+    <p id="word4"> ______</p>.
     <p>Men så kom</p>
-    <p>______</p>
+    <p id="word5">______</p>
     <p>med en løsning! Og alt endte</p>
-    <p>______</p>!
+    <p id="word6">______</p>!
 </div>
 
 <div id="words">
-    <div class="wordsBorder">katt</div>
-    <div class="wordsBorder">gang</div>
-    <div class="wordsBorder">male</div>
-    <div class="wordsBorder">kode</div><br>
-    <div class="wordsBorder">motivasjon</div>
-    <div class="wordsBorder">mat</div>
-    <div class="wordsBorder">teamet</div>
-    <div class="wordsBorder">mamma</div><br>
-    <div class="wordsBorder">bra</div>
-    <div class="wordsBorder">gunstig</div>
+    <div onclick="SendWord('katt')" class="wordsBorder">katt</div>
+    <div onclick="SendWord('gang')" class="wordsBorder">gang</div>
+    <div onclick="SendWord('male')"class="wordsBorder">male</div>
+    <div onclick="SendWord('kode')" class="wordsBorder">kode</div><br>
+    <div onclick="SendWord('motivasjon')" class="wordsBorder">motivasjon</div>
+    <div onclick="SendWord('mat')" class="wordsBorder">mat</div>
+    <div onclick="SendWord('teamet')" class="wordsBorder">teamet</div>
+    <div onclick="SendWord('mamma')" class="wordsBorder">mamma</div><br>
+    <div onclick="SendWord('bra')" class="wordsBorder">bra</div>
+    <div onclick="SendWord('gunstig')" class="wordsBorder">gunstig</div>
 </div>
 
 <script>
     //modell
+    let Ord;
 
     //view
+    function SendWord(firstWord){
+        Ord = firstWord
+        document.getElementById('word1').innerText = firstWord;
+      
+     }
+
 
     //controller
 </script>
