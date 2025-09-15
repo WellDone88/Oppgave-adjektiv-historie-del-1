@@ -16,6 +16,8 @@
             flex-wrap: wrap;
             align-items: center;
             text-align: center;
+            gap: 10px;
+            row-gap: 10px;
             color: blue;
             font-family: papyrus;
             font-size: larger;
@@ -90,12 +92,18 @@ Løs oppgaven ved å dele opp koden i MVC -->
 <script>
     //modell
     let Ord = 'katt'
+    let Options = 1;
 
     //view
     function SendWord(firstWord){
-        document.getElementById('word1').innerText = firstWord;
-      
-     }
+        if(Options <= 6){
+            document.getElementById(`word${Options}`).innerHTML = firstWord;
+            Options++; 
+        }
+        else {
+            alert('Historien er ferdig!');
+        }
+        }
 
 
     //controller
