@@ -67,12 +67,12 @@ Løs oppgaven ved å dele opp koden i MVC -->
 <script>
     //modell
     let Options = 1;
-    const buttarr = ['katt', 'gang', 'male','kode','motivasjon', 'mat'];
+    let buttarr = ['katt', 'gang', 'male','kode','motivasjon', 'mat'];
 
     //view
     UpdateView()
     function UpdateView(){
-    document.getElementById('app').innerHTML = /*HTML*/`
+    let HTML= /*HTML*/`
         
     <h1>En adjektivhistorie!</h1>
 
@@ -91,9 +91,21 @@ Løs oppgaven ved å dele opp koden i MVC -->
         <p id="word6">______</p>!
     </div>
 
+    <div id="words">
+        <div onclick="SendWord('katt')" class="wordsBorder">katt</div>
+        <div onclick="SendWord('gang')" class="wordsBorder">gang</div>
+        <div onclick="SendWord('male')"class="wordsBorder">male</div>
+        <div onclick="SendWord('kode')" class="wordsBorder">kode</div><br>
+        <div onclick="SendWord('motivasjon')" class="wordsBorder">motivasjon</div>
+        <div onclick="SendWord('mat')" class="wordsBorder">mat</div>
+        <div onclick="SendWord('teamet')" class="wordsBorder">teamet</div>
+        <div onclick="SendWord('mamma')" class="wordsBorder">mamma</div><br>
+        <div onclick="SendWord('bra')" class="wordsBorder">bra</div>
+        <div onclick="SendWord('gunstig')" class="wordsBorder">gunstig</div>
+    </div>`
+        document.getElementById('app').innerHTML = HTML;
+    }
     
-
-    `}
 
     //controller 
     function SendWord(firstWord){
@@ -108,16 +120,16 @@ Løs oppgaven ved å dele opp koden i MVC -->
     //se video en gang til i morgen 
 
     //jørgen array triks!
-     function genButtons(MyButton){
-        for(i = 0; i < buttarr.length; i++) {
-            html+= /*HTML*/
-            `<button class="wordsBorder" onclick="${MyButtom}">${MyButton}</button>`
-            document.getElementById('app').innerHTML = html;
-        }
+     //function genButtons(MyButton){
+       // for(i = 0; i < buttarr.length; i++) {
+           // html+= /*HTML*/
+           // `<button class="wordsBorder" onclick="${MyButtom}">${MyButton}</button>`
+           // document.getElementById('app').innerHTML = html;
+       // }
         
         
-     }
-     UpdateView()
+     //}
+     //UpdateView()
 </script>
     
 </body>
